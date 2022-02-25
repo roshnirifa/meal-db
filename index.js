@@ -55,7 +55,7 @@ const displayMealDetail = meal => {
             <div class="card-body">
                 <h5 class="card-title">${meal.strMeal}</h5>
                 <p class="card-text">${meal.strInstructions.slice(0, 200)}</p>
-                <a href="${meal.strYoutube}" class="btn btn-primary">Go somewhere</a>
+                <a href="${meal.strYoutube}" class="btn btn-primary">Details</a>
             </div>
     `;
 
