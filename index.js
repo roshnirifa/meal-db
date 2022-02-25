@@ -2,7 +2,7 @@ const searchFood = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     // clear data
-    searchField.value = "";
+    // searchField.value = "";
     if (searchText == '') {
         alert('please write something to display')
     }
@@ -20,6 +20,8 @@ const displaySearchResult = meals => {
     // console.log(meals);
     const searchResult = document.getElementById('search-result');
     searchResult.innerHTML = '';
+    const mealDeatils = document.getElementById('meal-details')
+    mealDeatils.innerHTML = ''
     meals.forEach(meal => {
         // console.log(meal);
         const div = document.createElement('div')
@@ -47,7 +49,11 @@ const loadMealDetail = mealId => {
 const displayMealDetail = meal => {
     // console.log(meal);
     const mealDeatils = document.getElementById('meal-details')
+
+    const searchResult = document.getElementById('search-result');
+
     mealDeatils.innerHTML = ''
+    searchResult.innerHTML = '';
     const div = document.createElement('div')
     div.classList.add('card')
     div.innerHTML = `
