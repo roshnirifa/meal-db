@@ -20,8 +20,6 @@ const displaySearchResult = meals => {
     // console.log(meals);
     const searchResult = document.getElementById('search-result');
     searchResult.innerHTML = '';
-
-
     meals.forEach(meal => {
         // console.log(meal);
         const div = document.createElement('div')
@@ -34,11 +32,7 @@ const displaySearchResult = meals => {
                             </div>
                          </div>`;
         searchResult.appendChild(div);
-
-
-
     })
-
 }
 
 const loadMealDetail = mealId => {
@@ -53,6 +47,7 @@ const loadMealDetail = mealId => {
 const displayMealDetail = meal => {
     // console.log(meal);
     const mealDeatils = document.getElementById('meal-details')
+    mealDeatils.innerHTML = ''
     const div = document.createElement('div')
     div.classList.add('card')
     div.innerHTML = `
@@ -63,5 +58,8 @@ const displayMealDetail = meal => {
                 <a href="${meal.strYoutube}" class="btn btn-primary">Go somewhere</a>
             </div>
     `;
+
     mealDeatils.appendChild(div)
 }
+
+
